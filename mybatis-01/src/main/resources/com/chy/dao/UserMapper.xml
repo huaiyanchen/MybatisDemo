@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chy.dao.UserMapper">
+    <insert id="addUser">
+        insert into mybatis.test (id, name) VALUES (#{id},#{name});
+    </insert>
+    <update id="updateUser">
+        update mybatis.test set name = #{name} where id = #{id};
+
+    </update>
+    <delete id="deleteUser" parameterType="int" >
+        delete from mybatis.test where id = #{id}
+    </delete>
+
+    <select id="getUserList" parameterType="list" resultType="com.chy.dao.User">
+        select id, name from mybatis.test;
+    </select>
+    <select id="getUserById" resultType="com.chy.dao.User" parameterType="int">
+        select id, name from mybatis.test where id = #{id};
+    </select>
+
+</mapper>
