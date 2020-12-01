@@ -13,9 +13,9 @@
     <resultMap id="Student" type="chy.dao.Student">
         <result property="id" column="sid"/>
         <result property="name" column="sname"/>
-        <association property="teacher" javaType="Teacher">
-            <id property="id" column="id"/>
+        <association property="teacher" javaType="chy.dao.Teacher">
             <result property="name" column="tname"/>
+
         </association>
     </resultMap>
     <select id="getById2" resultMap="Student">
