@@ -16,5 +16,7 @@
     </environments>
     <mappers>
         <mapper resource="chy/mapper/StudentMapper.xml"/>
+        <mapper resource="chy/mapper/TeacherDaoMapper.xml"/>
+
     </mappers>
 </configuration>
